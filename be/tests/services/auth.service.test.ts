@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import {
     hashPassword,
     comparePassword,
@@ -12,7 +12,7 @@ import {
 import { prisma } from "config/client";
 
 // MOCK
-jest.mock("bcrypt", () => ({
+jest.mock("bcryptjs", () => ({
     hash: jest.fn(),
     compare: jest.fn(),
 }));

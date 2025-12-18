@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import 'dotenv/config';
 import { prisma } from "config/client";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 
 const hashPassword = async (plainText: string) => {
