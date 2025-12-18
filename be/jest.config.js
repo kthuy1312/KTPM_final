@@ -7,6 +7,7 @@ module.exports = {
     moduleNameMapper: {
         "^config/(.*)$": "<rootDir>/src/config/$1",
         "^services/(.*)$": "<rootDir>/src/services/$1",
-        "^controllers/(.*)$": "<rootDir>/src/controllers/$1"
+        "^controllers/(.*)$": "<rootDir>/src/controllers/$1",
+        "^src/(.*)$": "<rootDir>/src/$1",
     }
 };
