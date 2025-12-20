@@ -6,13 +6,12 @@ Mục tiêu là thực hành các kỹ thuật kiểm thử, xây dựng test ca
 ---
 
 ## 👥 Thành viên nhóm & Vai trò
-
-| Họ và tên              | MSSV       | Vai trò chính       | Vai trò phụ             | Nhiệm vụ |
-|------------------------|------------|---------------------|-------------------------|---------------------------------------------------|
-| **Lý Kim Thúy**        | 3122411199 | Backend Developer   | Leader / Tester         | Quản lý nhóm, thiết kế kiến trúc, phát triển API, hỗ trợ viết test API |
-| **Tô Thảo Nhi**        | 3122411139 | Tester              | Frontend Developer      | Viết & chạy test case, kiểm thử giao diện, hỗ trợ phát triển UI |
-| **Đỗ Gia Huy**         | 3122411062 | Tester              | BA / Document Writer    | Thiết kế test scenario, test plan, viết báo cáo kiểm thử, phân tích yêu cầu |
-| **Nguyễn Võ Minh Hiếu**| 3122411057 | Frontend Developer  | Tester                  | Phát triển giao diện, kiểm thử chức năng, hỗ trợ viết test case |
+| Họ và tên               | MSSV       | Vai trò chính | Vai trò phụ               | Nhiệm vụ chính                                                                                  |
+|------------------------|------------|---------------|---------------------------|--------------------------------------------------------------------------------------------------|
+| **Lý Kim Thúy**         | 3122411199 | Tester        | Leader, Backend Developer | Quản lý nhóm, thiết kế kiến trúc hệ thống, phát triển API backend, kiểm thử                      |
+| **Tô Thảo Nhi**         | 3122411139 | Tester        | Frontend Developer        | Thiết kế, thực thi test case; kiểm thử; hỗ trợ phát triển frontend                               |
+| **Đỗ Gia Huy**          | 3122411062 | Tester        | BA, Document Writer       | Phân tích yêu cầu, xây dựng test scenario và test plan, kiểm thử, viết báo cáo                  |
+| **Nguyễn Võ Minh Hiếu** | 3122411057 | Tester        | Frontend Developer        | Phát triển giao diện người dùng, kiểm thử, hỗ trợ thiết kế và viết test case                    |
 
 ---
 

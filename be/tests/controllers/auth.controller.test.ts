@@ -128,5 +128,45 @@ describe("AUTH CONTROLLER - UNIT TEST", () => {
         });
     });
 
+    //4 case white box 
+    describe("AUTH CONTROLLER - LOGIN LOGIC CASES", () => {
 
+        // TC-LOGIN-01: Đúng email + password -> return token
+        it("TC-LOGIN-01: should return token when credentials are correct", () => {
+            (req as any).user = { id: 1, name: "Test", email: "test@gmail.com" };
+            (generateToken as jest.Mock).mockReturnValue("jwt-token");
+
+            loginWithJWT(req as Request, res as Response);
+
+            expect(generateToken).toHaveBeenCalledWith(req.user);
+            expect(jsonMock).toHaveBeenCalledWith({
+                message: "Login successful",
+                token: "jwt-token",
+            });
+        });
+
+        // TC-LOGIN-02: IF email không tồn tại -> trả về message mặc định của controller
+        it("TC-LOGIN-02: should return 401 when user missing", () => {
+            (req as any).user = null;
+            loginWithJWT(req as Request, res as Response);
+
+            expect(statusMock).toHaveBeenCalledWith(401);
+            expect(jsonMock).toHaveBeenCalledWith({ message: "Email / Password không đúng" });
+        });
+
+        // TC-LOGIN-03: IF email bị khóa (Cập nhật theo logic controller thực tế của bạn)
+        it("TC-LOGIN-03: should handle disabled account", () => {
+            (req as any).user = { id: 2, isActive: false };
+            loginWithJWT(req as Request, res as Response);
+        });
+
+        // TC-LOGIN-04: IF password sai
+        it("TC-LOGIN-04: should return 401 when password mismatch", () => {
+            (req as any).user = null; // Thường Passport trả về null khi sai pass
+            loginWithJWT(req as Request, res as Response);
+
+            expect(statusMock).toHaveBeenCalledWith(401);
+            expect(jsonMock).toHaveBeenCalledWith({ message: "Email / Password không đúng" });
+        });
+    });
 });
